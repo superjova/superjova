@@ -1,0 +1,15 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-superjova-dev-82151-authRole",
+            "UnauthRoleArn": "arn:aws:iam::221822506021:role/amplify-superjova-dev-82151-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::221822506021:role/amplify-superjova-dev-82151-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-superjova-dev-82151-deployment",
+            "UnauthRoleName": "amplify-superjova-dev-82151-unauthRole",
+            "StackName": "amplify-superjova-dev-82151",
+            "StackId": "arn:aws:cloudformation:us-east-1:221822506021:stack/amplify-superjova-dev-82151/ce6a14c0-96bf-11ea-b25a-0e765a9edd1f",
+            "AmplifyAppId": "d1ofysi1i4liwy"
+        }
+    }
+}
