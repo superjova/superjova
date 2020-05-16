@@ -1,0 +1,354 @@
+@keyframes marqueeText
+  0%
+    transform: translateX(100%)
+  50%
+    transform: translateX(0%)
+  100%
+    transform: translateX(-100%)
+
+.CityBuilding
+  width: 300px
+  height: 300px
+  position: relative
+  transform-style: preserve-3d
+  transform: translateZ(-150px) rotateY( -45deg) rotateX(-5deg) rotateZ(5deg)
+  transition: transform 1s
+
+  .CityBuilding__face
+    position: absolute
+    width: 300px
+    height: 300px
+    border: 2px solid black
+    line-height: 300px
+    font-size: 40px
+    font-weight: bold
+    color: white
+    text-align: center
+    overflow: hidden
+
+    &.CityBuilding__face--left, &.CityBuilding__face--right, &.CityBuilding__face--front, &.CityBuilding__face--back
+      height: 800px
+
+      &::before
+        background: linear-gradient(to bottom, transparent, transparent 90%, rgb(0, 0, 0) 95%, rgb(0, 0, 0))
+        background-size: 100% 10px
+        bottom: 0
+        content: ''
+        left: 0
+        position: absolute
+        right: 0
+        top: 0
+
+      &::after
+        background: linear-gradient(to right, transparent, transparent 90%, rgb(0, 0, 0) 95%, rgb(0, 0, 0))
+        background-size: 10px 100%
+        bottom: 0
+        content: ''
+        left: 0
+        position: absolute
+        right: 0
+        top: 0
+
+    &.CityBuilding__face--front
+      background: rgb(28, 28, 28)
+
+    &.CityBuilding__face--right
+      background: rgb(28, 28, 28)
+
+    &.CityBuilding__face--back
+      background: rgb(28, 28, 28)
+
+    &.CityBuilding__face--left
+      background: rgb(28, 28, 28)
+
+    &.CityBuilding__face--top
+      background: rgb(28, 28, 28)
+
+    &.CityBuilding__face--bottom
+      background: rgb(28, 28, 28)
+
+    &.CityBuilding__face--front
+      transform: rotateY(  0deg) translateZ(150px)
+
+    &.CityBuilding__face--right
+      transform: rotateY( 90deg) translateZ(150px)
+
+    &.CityBuilding__face--back
+      transform: rotateY(180deg) translateZ(150px)
+
+    &.CityBuilding__face--left
+      transform: rotateY(-90deg) translateZ(150px)
+
+    &.CityBuilding__face--top
+      transform: rotateX( 90deg) translateZ(150px)
+
+    &.CityBuilding__face--bottom
+      transform: rotateX(-90deg) translateZ(150px)
+
+.App-building
+  z-index: 3
+
+  .CityBuilding
+    width: 600px
+    height: 600px
+    transform: translateZ(-300px) rotateY(-60deg) rotateX(-3deg) rotateZ(5deg)
+
+    .CityBuilding__face
+      width: 600px
+      height: 600px
+
+      &.CityBuilding__face--left, &.CityBuilding__face--right, &.CityBuilding__face--front, &.CityBuilding__face--back
+        height: 1200px
+
+      &.CityBuilding__face--front
+        background:
+          color: rgb(26, 26, 26)
+          image: url('profile.jpg')
+          position: top
+          repeat: no-repeat
+          size: contain
+
+      &.CityBuilding__face--right
+        background: linear-gradient(180deg, rgb(16, 16, 16) 0%, rgb(28, 28, 28) 100%)
+
+      &.CityBuilding__face--back
+        background: linear-gradient(180deg, rgb(16, 16, 16) 0%, rgb(28, 28, 28) 100%)
+
+      &.CityBuilding__face--left
+        background: linear-gradient(180deg, rgb(16, 16, 16) 0%, rgb(28, 28, 28) 100%)
+
+      &.CityBuilding__face--top
+        background: linear-gradient(180deg, rgb(16, 16, 16) 0%, rgb(28, 28, 28) 100%)
+
+      &.CityBuilding__face--bottom
+        background: linear-gradient(180deg, rgb(16, 16, 16) 0%, rgb(28, 28, 28) 100%)
+
+      &.CityBuilding__face--front
+        transform: rotateY(  0deg) translateZ(300px)
+
+      &.CityBuilding__face--right
+        transform: rotateY( 90deg) translateZ(300px)
+
+      &.CityBuilding__face--back
+        transform: rotateY(180deg) translateZ(300px)
+
+      &.CityBuilding__face--left
+        transform: rotateY(-90deg) translateZ(300px)
+
+      &.CityBuilding__face--top
+        transform: rotateX( 90deg) translateZ(300px)
+
+      &.CityBuilding__face--bottom
+        transform: rotateX(-90deg) translateZ(300px)
+
+.App-background-building
+  display: flex
+  filter: blur(2px)
+  z-index: 0
+
+  .CityBuilding
+    height: 180px
+    transform: translateZ(-90px) rotateY(-45deg) rotateX(-5deg) rotateZ(5deg)
+    width: 180px
+    margin: 0px 60px
+
+    .CityBuilding__face
+      height: 180px
+      width: 180px
+
+      &.CityBuilding__face--left, &.CityBuilding__face--right, &.CityBuilding__face--front, &.CityBuilding__face--back
+        height: 1000px
+
+      &.CityBuilding__face--front
+        background: linear-gradient(180deg, rgb(14, 14, 14) 0%, rgb(22, 22, 36) 100%)
+
+      &.CityBuilding__face--right
+        background: linear-gradient(180deg, rgb(14, 14, 14) 0%, rgb(22, 22, 36) 100%)
+
+      &.CityBuilding__face--back
+        background: linear-gradient(180deg, rgb(14, 14, 14) 0%, rgb(22, 22, 36) 100%)
+
+      &.CityBuilding__face--left
+        background: linear-gradient(180deg, rgb(14, 14, 14) 0%, rgb(22, 22, 36) 100%)
+
+      &.CityBuilding__face--top
+        background: linear-gradient(180deg, rgb(14, 14, 14) 0%, rgb(22, 22, 36) 100%)
+
+      &.CityBuilding__face--bottom
+        background: linear-gradient(180deg, rgb(14, 14, 14) 0%, rgb(22, 22, 36) 100%)
+
+      &.CityBuilding__face--front
+        transform: rotateY(  0deg) translateZ(90px)
+
+      &.CityBuilding__face--right
+        transform: rotateY( 90deg) translateZ(90px)
+
+      &.CityBuilding__face--back
+        transform: rotateY(180deg) translateZ(90px)
+
+      &.CityBuilding__face--left
+        transform: rotateY(-90deg) translateZ(90px)
+
+      &.CityBuilding__face--top
+        transform: rotateX( 90deg) translateZ(90px)
+
+      &.CityBuilding__face--bottom
+        transform: rotateX(-90deg) translateZ(90px)
+
+.App-foreground-building
+  z-index: 2
+
+  .CityBuilding
+    height: 250px
+    transform: translateZ(-125px) rotateY(-75deg) rotateX(-3deg) rotateZ(10deg)
+    width: 250px
+
+    .CityBuilding__face
+      height: 250px
+      width: 250px
+
+      &.CityBuilding__face--left, &.CityBuilding__face--right, &.CityBuilding__face--front, &.CityBuilding__face--back
+        height: 1000px
+
+      &.CityBuilding__face--front
+        background: rgb(14, 14, 14)
+
+      &.CityBuilding__face--right
+        background: rgb(14, 14, 14)
+
+      &.CityBuilding__face--back
+        background: rgb(14, 14, 14)
+
+      &.CityBuilding__face--left
+        background: rgb(14, 14, 14)
+
+      &.CityBuilding__face--top
+        background: rgb(14, 14, 14)
+
+      &.CityBuilding__face--bottom
+        background: rgb(14, 14, 14)
+
+      &.CityBuilding__face--front
+        transform: rotateY(  0deg) translateZ(125px)
+
+      &.CityBuilding__face--right
+        transform: rotateY( 90deg) translateZ(125px)
+
+      &.CityBuilding__face--back
+        transform: rotateY(180deg) translateZ(125px)
+
+      &.CityBuilding__face--left
+        transform: rotateY(-90deg) translateZ(125px)
+
+      &.CityBuilding__face--top
+        transform: rotateX( 90deg) translateZ(125px)
+
+      &.CityBuilding__face--bottom
+        transform: rotateX(-90deg) translateZ(125px)
+
+.App-marquee-building
+  z-index: 4
+
+  .CityBuilding
+    height: 250px
+    transform: translateZ(-125px) rotateY(-45deg) rotateX(-5deg) rotateZ(5deg)
+    width: 250px
+
+    .CityBuilding__face
+      height: 250px
+      width: 250px
+
+      &.CityBuilding__face--left, &.CityBuilding__face--right, &.CityBuilding__face--front, &.CityBuilding__face--back
+        height: 1000px
+
+        &::before
+          background-size: 100% 18px
+
+        &::after
+          background-size: 18px 100%
+
+      &.CityBuilding__face--front
+        background: rgb(18, 18, 18)
+
+        .App-marquee
+          animation-delay: 5s
+
+      &.CityBuilding__face--right
+        background: linear-gradient(180deg, #10090B 0%, #272027 100%)
+
+      &.CityBuilding__face--back
+        background: linear-gradient(180deg, #10090B 0%, #272027 100%)
+
+      &.CityBuilding__face--left
+        background: linear-gradient(180deg, #10090B 0%, #272027 100%)
+
+      &.CityBuilding__face--top
+        background: #10090B
+
+      &.CityBuilding__face--bottom
+        background: linear-gradient(180deg, #10090B 0%, #272027 100%)
+
+      &.CityBuilding__face--front
+        transform: rotateY(  0deg) translateZ(125px)
+
+      &.CityBuilding__face--right
+        transform: rotateY( 90deg) translateZ(125px)
+
+      &.CityBuilding__face--back
+        transform: rotateY(180deg) translateZ(125px)
+
+      &.CityBuilding__face--left
+        transform: rotateY(-90deg) translateZ(125px)
+
+      &.CityBuilding__face--top
+        transform: rotateX( 90deg) translateZ(125px)
+
+      &.CityBuilding__face--bottom
+        transform: rotateX(-90deg) translateZ(125px)
+
+.App-marquee
+  animation:
+    name: marqueeText
+    duration: 10s
+    iteration-count: infinite
+    timing-function: linear
+  background:
+    image: url('logo.svg')
+    repeat: no-repeat
+    size: contain
+  height: 40px
+  transform: translateX(100%)
+  width: 100%
+
+.Building-light
+  background: rgb(0,0,0)
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)
+
+.CircleBuilding
+  align-items: center
+  background: black
+  background: radial-gradient(circle at 120px 90px, #1b1c1d, #070707)
+  border: solid 1px #000000
+  border-top-left-radius: 50%
+  border-top-right-radius: 50%
+  display: flex
+  filter: blur(1px)
+  height: 160px
+  justify-content: center
+  left: 320px
+  position: absolute
+  top: 440px
+  width: 160px
+  z-index: 1
+
+  &::after
+    border: solid 2px #FFFFFF
+    border-radius: 5px
+    box-shadow: 1px 1px 4px #63ffe7, -1px 1px 4px #63ffe7, -1px -1px 4px #63ffe7, 1px -1px 4px #63ffe7
+    color: #FFFFFF
+    content: 'OFF'
+    font:
+      size: 28px
+    letter-spacing: 2px
+    line-height: 1
+    text-shadow: 2px 2px 8px #63ffe7, -2px 2px 8px #63ffe7, -2px -2px 8px #63ffe7, 2px -2px 8px #63ffe7

@@ -1,24 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import CityBuilding from './CityBuilding';
+import './App.sass';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="App-buildings">
+        <div class="container">
+          <div className="App-background-building">
+            <CityBuilding/>
+            <CityBuilding/>
+          </div>
+          <div className="CircleBuilding"></div>
+          <div className="App-foreground-building">
+            <CityBuilding/>
+          </div>
+          <div className="App-marquee-building">
+            <CityBuilding front={(<div className="App-marquee"></div>)} right={(<div className="App-marquee"></div>)}/>
+          </div>
+          <div className="App-building">
+            <CityBuilding/>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

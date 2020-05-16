@@ -1,0 +1,49 @@
+@keyframes flicker
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100%
+    text-shadow: -5px -5px 1rem #fff, 5px 5px 1rem #fff, 0 0 2.5px #FE53BB, 0 0 5px #FE53BB, 0 0 10px #FE53BB, 0 0 15px #FE53BB, 0 0 20px #FE53BB
+    box-shadow: 0 0 5px #fff, inset 0 0 5px #fff, 0 0 2.5px #08F7FE, inset 0 0 2.5px #08F7FE, 0 0 10px #08F7FE, inset 0 0 20px #08F7FE
+
+  20%, 24%, 55%
+    text-shadow: none
+    box-shadow: none
+
+.App
+  .App-cta
+    color: #FFFFFF
+    font:
+      size: 16px
+    margin-top: 10px
+
+  .App-buildings
+    background: rgb(1,4,22)
+    background: linear-gradient(180deg, rgba(1,4,22,1) 0%, rgba(4,8,31,1) 85%, rgba(11,15,36,1) 96%, rgba(76,92,105,1) 100%)
+    border-bottom: solid 10px #D3AF45
+    height: 800px
+    margin-bottom: 80px
+    overflow: hidden
+
+    .container
+      position: relative
+
+  .App-building
+    position: absolute
+    right: -400px
+    top: 0px
+
+  .App-background-building
+    left: 45%
+    position: absolute
+    top: -100px
+    transform: translatex(-50%)
+
+  .App-foreground-building
+    left: 40%
+    position: absolute
+    top: 600px
+    transform: translatex(-50%)
+
+  .App-marquee-building
+    left: 5%
+    position: absolute
+    top: 300px
+    transform: translatex(-50%)

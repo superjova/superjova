@@ -1,0 +1,73 @@
+.VideoCassette
+  background-color: #000000
+  border: solid 4px #000000
+  border-radius: 2px
+  cursor: pointer
+  padding: 10px 40px
+
+  & + .VideoCassette
+    margin-top: 5px
+
+  &.VideoCassette--active
+    border-color: #00FF00
+
+  &:not(.VideoCassette--active):hover
+    border-color: #006600
+
+  .VideoCassette-label
+    background: linear-gradient(to bottom, #FFFFFF, #FFFFFF 90%, #AAAAAA 90%, #AAAAAA)
+    background-size: 100% 10px
+    border-radius: 2px
+    font-size: 20px
+    padding: 5px 10px
+    text-align: center
+  //
+  // .VideoCassette-body
+  //   background-color: #000000
+  //   display: flex
+  //   padding: 1%
+  //   position: relative
+  //
+  //   &::before
+  //     background-color: #000000
+  //     bottom: 85%
+  //     content: ''
+  //     left: 0
+  //     position: absolute
+  //     right: 0
+  //     top: 0
+  //
+  //   &::after
+  //     background-color: #000000
+  //     bottom: 0
+  //     content: ''
+  //     left: 0
+  //     position: absolute
+  //     right: 0
+  //     top: 85%
+  //
+  // .VideoCassette-circle
+  //   flex: 1 1 auto
+  //
+  //   &::after
+  //     background-color: #E7E7E7
+  //     border-radius: 50%
+  //     content: '.'
+  //     display: block
+  //     padding-bottom: 100%
+  //
+  // .VideoCassette-label
+  //   align-items: center
+  //   background-color: #FFFFFF
+  //   border:
+  //     left: solid 10px #000000
+  //     right: solid 10px #000000
+  //   bottom: 15%
+  //   display: flex
+  //   font-size: 20px
+  //   justify-content: center
+  //   left: 20%
+  //   position: absolute
+  //   right: 20%
+  //   top: 15%
+  //   z-index: 1
