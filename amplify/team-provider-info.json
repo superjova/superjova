@@ -10,6 +10,14 @@
             "StackName": "amplify-superjova-dev-82151",
             "StackId": "arn:aws:cloudformation:us-east-1:221822506021:stack/amplify-superjova-dev-82151/ce6a14c0-96bf-11ea-b25a-0e765a9edd1f",
             "AmplifyAppId": "d1ofysi1i4liwy"
+        },
+        "categories": {
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d1ofysi1i4liwy",
+                    "type": "cicd"
+                }
+            }
         }
     }
 }
