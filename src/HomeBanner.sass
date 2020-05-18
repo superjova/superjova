@@ -1,0 +1,114 @@
+.HomeBanner
+  background: rgb(20,6,31)
+  background: linear-gradient(180deg, rgba(20,6,31,1) 0%, rgba(56,19,76,1) 50%)
+  height: 800px
+  overflow: hidden
+  perspective: 800px
+  position: relative
+
+  &::before
+    background: linear-gradient(to bottom, transparent, transparent 90%, rgb(0, 0, 0) 95%, rgb(0, 0, 0))
+    background-size: 100% 10px
+    bottom: 0
+    content: ''
+    left: 0
+    position: absolute
+    right: 0
+    top: 0
+
+  .container
+    bottom: 0px
+    left: 0px
+    position: absolute
+    right: 0px
+    top: 0px
+
+  .HomeBanner-grid
+    background: rgb(173,63,219)
+    background: linear-gradient(180deg, rgba(173,63,219,1) 0%, rgba(74,75,179,1) 50%, rgba(7,14,33,1) 100%)
+    bottom: -30%
+    content: ''
+    left: -100%
+    position: absolute
+    right: -100%
+    top: 0%
+    transform: rotateX(80deg)
+    transform-style: preserve-3d
+    z-index: 1
+
+    &::before
+      background: linear-gradient(to bottom, transparent, transparent 95%, rgba(21, 244, 238, 0.8) 95%, rgba(21, 244, 238, 0.8))
+      background-size: 100% 100px
+      bottom: 0
+      content: ''
+      left: 0
+      position: absolute
+      right: 0
+      top: 0
+
+    &::after
+      background: linear-gradient(to right, transparent, transparent 95%, rgba(21, 244, 238, 0.8) 95%, rgba(21, 244, 238, 0.8))
+      background-size: 60px 100%
+      bottom: 0
+      content: ''
+      left: 0
+      position: absolute
+      right: 0
+      top: 0
+
+  .HomeBanner-image
+    position: absolute
+    left: 50%
+    top: 33%
+    transform: translate(-50%, -50%)
+    width: 90%
+    z-index: 0
+
+    @media (min-width: 992px)
+      top: 30%
+      width: 40%
+
+    &::after
+      background:
+        image: url('profile.jpg')
+        position: center
+        size: cover
+      border-radius: 50%
+      -webkit-box-shadow: -10px 0px 5px 0px rgba(72,245,222,0.9), 10px 0px 5px 0px rgba(215,32,222,0.9)
+      -moz-box-shadow: -10px 0px 5px 0px rgba(72,245,222,0.9), 10px 0px 5px 0px rgba(215,32,222,0.9)
+      box-shadow: -10px 0px 5px 0px rgba(72,245,222,0.9), 10px 0px 5px 0px rgba(215,32,222,0.9)
+      content: ''
+      display: block
+      padding-bottom: 100%
+      width: 100%
+
+  .HomeBanner-logo
+    background:
+      image: url('logo-chrome.svg')
+      position: center
+      repeat: no-repeat
+      size: contain
+    height: 100px
+    left: 50%
+    position: absolute
+    top: 50%
+    transform: translate(-50%, -50%)
+    width: 100%
+    z-index: 2
+
+  .HomeBanner-tagline
+    background:
+      image: url('premium-tagline.svg')
+      position: center
+      repeat: no-repeat
+      size: contain
+    height: 80px
+    left: 50%
+    position: absolute
+    top: 60%
+    transform: translate(-50%, -50%)
+    width: 100%
+    z-index: 2
+
+    @media (min-width: 992px)
+      top: 63%
