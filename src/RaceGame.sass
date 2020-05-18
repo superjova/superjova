@@ -1,0 +1,199 @@
+@keyframes stripes
+  0%
+    transform: translateY(-50%)
+
+  100%
+    transform: translateY(8%)
+
+@keyframes sign
+  0%
+    opacity: 1
+    transform: translateY(4000px) translateZ(-10000px)
+
+  20%
+    opacity: 1
+    transform: translateY(0px) translateZ(700px)
+
+  49%
+    opacity: 0
+    transform: translateY(0px) translateZ(700px)
+
+  50%
+    opacity: 1
+    transform: translateY(4000px) translateZ(-10000px)
+
+  70%
+    opacity: 1
+    transform: translateY(0px) translateZ(700px)
+
+  99%
+    opacity: 0
+    transform: translateY(0px) translateZ(700px)
+
+  100%
+    opacity: 0
+    transform: translateY(0px) translateZ(700px)
+
+.RaceGame
+  background: rgb(20,6,31)
+  background: linear-gradient(180deg, rgba(20,6,31,1) 0%, rgba(56,19,76,1) 25%)
+  border-bottom: solid 5px #FF00FF
+  height: 700px
+  overflow: hidden
+  perspective: 700px
+  position: relative
+
+  @media (max-width: 992px)
+    background: linear-gradient(180deg, rgba(20,6,31,1) 0%, rgba(56,19,76,1) 50%)
+    height: 800px
+
+  &::before
+    background: linear-gradient(to bottom, transparent, transparent 90%, rgb(0, 0, 0) 95%, rgb(0, 0, 0))
+    background-size: 100% 10px
+    bottom: 0
+    content: ''
+    left: 0
+    position: absolute
+    right: 0
+    top: 0
+
+  .RaceGame-level
+    background: rgb(20,6,31)
+    height: 100%
+    left: -50%
+    overflow: hidden
+    position: absolute
+    right: -50%
+    top: 39%
+    transform: rotateX(105deg)
+    transform-style: preserve-3d
+    z-index: 2
+
+  .RaceGame-street
+    // border:
+    //   left: solid 5px #FFFFFF
+    //   right: solid 5px #FFFFFF
+    // background-color: #030101
+    height: 100%
+    margin: auto
+    position: relative
+    width: 25%
+
+    background: rgb(173,63,219)
+    background: linear-gradient(180deg, rgba(173,63,219,1) 0%, rgba(74,75,179,1) 50%, rgba(7,14,33,1) 100%)
+    -webkit-box-shadow: 0px 0px 80px 0px rgba(72,245,222,0.8)
+    -moz-box-shadow: 0px 0px 80px 0px rgba(72,245,222,0.8)
+    box-shadow: 0px 0px 80px 0px rgba(72,245,222,0.8)
+    // bottom: -30%
+    // content: ''
+    // left: -100%
+    // position: absolute
+    // right: -100%
+    // top: -20%
+    // transform: rotateX(80deg)
+    // transform-style: preserve-3d
+    // z-index: 1
+
+    // @media (min-width: 992px)
+    //   bottom: -30%
+    //   top: 0%
+
+    &::before
+      animation:
+        name: stripes
+        duration: 1s
+        iteration-count: infinite
+        timing-function: linear
+      background: linear-gradient(to bottom, rgba(21, 244, 238, 0.8), rgba(21, 244, 238, 0.8) 60%, transparent 60%, transparent)
+      background-size: 100% 100px
+      bottom: 0
+      content: ''
+      height: 200%
+      left: 0
+      position: absolute
+      top: 0
+      width: 5px
+
+    &::after
+      animation:
+        name: stripes
+        duration: 1s
+        iteration-count: infinite
+        timing-function: linear
+      background: linear-gradient(to bottom, rgba(21, 244, 238, 0.8), rgba(21, 244, 238, 0.8) 60%, transparent 60%, transparent)
+      background-size: 100% 100px
+      bottom: 0
+      content: ''
+      height: 200%
+      position: absolute
+      right: 0
+      top: 0
+      width: 5px
+
+  // .RaceGame-stripes
+  //   animation:
+  //     name: stripes
+  //     duration: 1s
+  //     iteration-count: infinite
+  //     timing-function: linear
+  //   background: linear-gradient(to bottom, #FFFFFF, #FFFFFF 50%, transparent 50%, transparent)
+  //   background-size: 100% 200px
+  //   height: 200%
+  //   margin: auto
+  //   width: 10px
+
+  .RaceGame-sign
+    animation:
+      name: sign
+      duration: 50s
+      iteration-count: infinite
+      timing-function: linear
+    bottom: 10px
+    left: 10px
+    position: absolute
+    right: 10px
+    top: 10px
+    transform-style: preserve-3d
+    z-index: 1
+
+    &:nth-child(2)
+      animation-delay: 5s
+
+    &:nth-child(3)
+      animation-delay: 10s
+
+    &:nth-child(4)
+      animation-delay: 15s
+
+    &:nth-child(5)
+      animation-delay: 20s
+
+  .RaceGame-sign-text
+    align-items: center
+    background: rgb(20,6,31)
+    background: linear-gradient(180deg, rgba(20,6,31,1) 0%, rgba(56,19,76,1) 100%)
+    border-radius: 50%
+    -webkit-box-shadow: -10px 0px 5px 0px rgba(72,245,222,0.9), 10px 0px 5px 0px rgba(215,32,222,0.9), 0px 30px 40px 20px rgba(72,245,222,0.3)
+    -moz-box-shadow: -10px 0px 5px 0px rgba(72,245,222,0.9), 10px 0px 5px 0px rgba(215,32,222,0.9), 0px 30px 40px 20px rgba(72,245,222,0.3)
+    box-shadow: -10px 0px 5px 0px rgba(72,245,222,0.9), 10px 0px 5px 0px rgba(215,32,222,0.9), 0px 30px 40px 20px rgba(72,245,222,0.3)
+    color: #FFFFFF
+    display: flex
+    font-size: 32px
+    height: 300px
+    justify-content: center
+    margin: auto
+    position: relative
+    width: 300px
+
+  .RaceGame-sign-warning
+    align-items: center
+    background-color: #F68E09
+    bottom: 0px
+    color: #282828
+    display: flex
+    font-size: 18px
+    height: 30px
+    left: 0px
+    justify-content: center
+    position: absolute
+    right: 0px
