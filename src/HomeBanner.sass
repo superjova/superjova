@@ -1,10 +1,13 @@
 .HomeBanner
   background: rgb(20,6,31)
   background: linear-gradient(180deg, rgba(20,6,31,1) 0%, rgba(56,19,76,1) 50%)
-  height: 800px
+  height: 700px
   overflow: hidden
-  perspective: 800px
+  perspective: 700px
   position: relative
+
+  @media (max-width: 992)
+    height: 800px
 
   &::before
     background: linear-gradient(to bottom, transparent, transparent 90%, rgb(0, 0, 0) 95%, rgb(0, 0, 0))
@@ -74,41 +77,54 @@
         position: center
         size: cover
       border-radius: 50%
-      -webkit-box-shadow: -10px 0px 5px 0px rgba(72,245,222,0.9), 10px 0px 5px 0px rgba(215,32,222,0.9)
-      -moz-box-shadow: -10px 0px 5px 0px rgba(72,245,222,0.9), 10px 0px 5px 0px rgba(215,32,222,0.9)
-      box-shadow: -10px 0px 5px 0px rgba(72,245,222,0.9), 10px 0px 5px 0px rgba(215,32,222,0.9)
+      -webkit-box-shadow: -10px 0px 5px 0px rgba(72,245,222,0.9), 10px 0px 5px 0px rgba(215,32,222,0.9), 0px 30px 40px 20px rgba(72,245,222,0.3)
+      -moz-box-shadow: -10px 0px 5px 0px rgba(72,245,222,0.9), 10px 0px 5px 0px rgba(215,32,222,0.9), 0px 30px 40px 20px rgba(72,245,222,0.3)
+      box-shadow: -10px 0px 5px 0px rgba(72,245,222,0.9), 10px 0px 5px 0px rgba(215,32,222,0.9), 0px 30px 40px 20px rgba(72,245,222,0.3)
       content: ''
       display: block
       padding-bottom: 100%
       width: 100%
 
   .HomeBanner-logo
-    background:
-      image: url('logo-chrome.svg')
-      position: center
-      repeat: no-repeat
-      size: contain
-    height: 100px
     left: 50%
     position: absolute
     top: 50%
     transform: translate(-50%, -50%)
-    width: 100%
-    z-index: 2
-
-  .HomeBanner-tagline
-    background:
-      image: url('premium-tagline.svg')
-      position: center
-      repeat: no-repeat
-      size: contain
-    height: 80px
-    left: 50%
-    position: absolute
-    top: 60%
-    transform: translate(-50%, -50%)
+    padding: 0px 10px
     width: 100%
     z-index: 2
 
     @media (min-width: 992px)
-      top: 63%
+      top: 53%
+
+    &::after
+      background:
+        image: url('logo-chrome.svg')
+        position: center
+        repeat: no-repeat
+        size: contain
+      content: ''
+      display: block
+      height: 100px
+
+  .HomeBanner-tagline
+    left: 50%
+    position: absolute
+    top: 60%
+    transform: translate(-50%, -50%)
+    padding: 0px 10px
+    width: 100%
+    z-index: 2
+
+    @media (min-width: 992px)
+      top: 66%
+
+    &::after
+      background:
+        image: url('premium-tagline.svg')
+        position: center
+        repeat: no-repeat
+        size: contain
+      content: ''
+      display: block
+      height: 80px
