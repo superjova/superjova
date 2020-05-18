@@ -1,12 +1,13 @@
 .HomeBanner
   background: rgb(20,6,31)
-  background: linear-gradient(180deg, rgba(20,6,31,1) 0%, rgba(56,19,76,1) 50%)
+  background: linear-gradient(180deg, rgba(20,6,31,1) 0%, rgba(56,19,76,1) 25%)
   height: 700px
   overflow: hidden
   perspective: 700px
   position: relative
 
   @media (max-width: 992)
+    background: linear-gradient(180deg, rgba(20,6,31,1) 0%, rgba(56,19,76,1) 50%)
     height: 800px
 
   &::before
@@ -34,10 +35,14 @@
     left: -100%
     position: absolute
     right: -100%
-    top: 0%
+    top: -20%
     transform: rotateX(80deg)
     transform-style: preserve-3d
     z-index: 1
+
+    @media (min-width: 992px)
+      bottom: -30%
+      top: 0%
 
     &::before
       background: linear-gradient(to bottom, transparent, transparent 95%, rgba(21, 244, 238, 0.8) 95%, rgba(21, 244, 238, 0.8))
@@ -62,14 +67,14 @@
   .HomeBanner-image
     position: absolute
     left: 50%
-    top: 35%
+    top: 30%
     transform: translate(-50%, -50%)
     width: 70%
     z-index: 0
 
     @media (min-width: 992px)
       top: 30%
-      width: 40%
+      width: 33.3%
 
     &::after
       background:
@@ -88,7 +93,7 @@
   .HomeBanner-logo
     left: 50%
     position: absolute
-    top: 50%
+    top: 44%
     transform: translate(-50%, -50%)
     padding: 0px 10px
     width: 100%
@@ -110,7 +115,7 @@
   .HomeBanner-tagline
     left: 50%
     position: absolute
-    top: 60%
+    top: 53%
     transform: translate(-50%, -50%)
     padding: 0px 10px
     width: 100%
@@ -127,4 +132,7 @@
         size: contain
       content: ''
       display: block
-      height: 80px
+      height: 60px
+
+      @media (min-width: 992px)
+        height: 80px
